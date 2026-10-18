@@ -1,5 +1,5 @@
 <meta name="google-site-verification" content="JV9E_FDhy60Xe3do3IcQoJIbQqgd6import streamlit as st
-from google import genai
+from google st.markdown import genai
 
 # Sayfa Ayarları
 st.set_page_config(
