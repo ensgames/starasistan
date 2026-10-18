@@ -1,4 +1,14 @@
 import streamlit as st
+
+# Tarayıcı sekmesinde ve Google'da görünecek başlık
+st.set_page_config(
+    page_title="Star Yapay Zeka Asistanı",
+    page_icon="✨",
+    layout="centered",
+)
+
+st.title("✨ Star Yapay Zeka")
+st.write("Star, sizin için tasarlanmış akıllı yapay zeka asistanıdır.")import streamlit as st
 from google import genai
 
 st.title("✨ Star Asistan")
