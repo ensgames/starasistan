@@ -3,7 +3,8 @@ from google import genai
 
 st.title("✨ Star Asistan")
 
-API_KEY = "AQ.Ab8RN6LNju9HmdtY28vNhiHQxNvwk_7WDTF82hnP1Tksej0hiw"
+# Anahtarı gizli ayarlardan alıyoruz
+API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -21,7 +22,6 @@ if prompt := st.chat_input("Star'a bir şeyler yaz..."):
         with st.spinner("Star düşünüyor..."):
             try:
                 client = genai.Client(api_key=API_KEY)
-                # Google'ın zorunlu kıldığı tek güncel model
                 response = client.models.generate_content(
                     model="gemini-3.8-flash",
                     contents=prompt,
